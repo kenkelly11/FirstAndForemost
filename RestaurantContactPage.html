@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link 		rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			crossorigin="anonymous">
+<link href="RestaurantStyles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<div class="alert">
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Note:</strong> This site performs best with JavaScript enabled. Please enable JavaScript on your device.
+</div>
+	<title>Contact Us!</title>
+	<style>
+		h3 {
+			border: none;
+			font: lora;
+			font-size: 50px;
+			text-decoration: underline;
+			color: yellow;
+			text-align: center;
+			}
+		
+		body	{
+				color: yellow;
+				font: lora;
+				font-size: ;
+				}
+			
+	
+	
+	
+	</style>
+	
+</head>
+<body>
+<header class="jumbotron">
+	<h1> CAFE AMARILLO </h1>
+	<h4 class="text-right">Now celebrating the Grand Opening of a brand new location!</h4>
+</header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Drink of the Month is SG Special Brew!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Seasonal Menu is now available!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Grand Opening is located at 415 Theremin Court!</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+			<nav>
+				<a class="btn" href="RestaurantHomePage.html">Home <i class="fas fa-house-damage"></i></a>
+				<a class="btn" href="RestaurantMenuPage.html">Menu <i class="fas fa-coffee"></i></a>
+				<a class="btn" href="RestaurantContactPage.html">Contact <i class="far fa-comment"></i></a>
+			</nav>
+		
+		<body>
+			<header>
+		
+			</header>
+				<h3><em>Get in Touch!</em></h3>
+	<div id="contactinfo">
+			<form action="submit.html" method="POST">
+			
+			<label for="firstName">First Name:</label> <br />
+			<input type="text" id="firstName" name="firstName" required> <br />
+			
+			<label for="lastName">Last Name:</label><br />
+			<input type="text" id="lastName" name="lastName"required> <br />
+			
+			<label for="phone">Phone Number:</label><br />
+			<input type="text" id="phone" name="phone" required> <br />
+			
+			<label for="contact">Best Time To Call:</label>
+				<br />
+			<select id="contact" name="contact">
+				<option value="default" selected>--Select One--</option>
+				<option value="morning">Morning (8AM to 12PM Eastern)</option>
+				<option value="afternoon">Afternoon (1PM to 4PM Eastern)</option>
+				<option value="evening">Evening (5PM to 9PM Eastern)</option>
+			</select>
+			
+			<fieldset>
+			<legend>My experience at <i>Cafe Amarillo</i> was:</legend><br />
+			<input type="radio" id="choice1" name="questionnaire" value="Poor">
+			<label for="choice1">Poor</label><br />
+			<input type="radio" id="choice2" name="questionnaire" value="Average">
+			<label for="choice2">Average</label><br />
+			<input type="radio" id="choice3" name="questionnaire" value="Above">
+			<label for="choice3">Above Average</label><br />
+			<input type="radio" id="choice4" name="questionnaire" value="Exceptional">
+			<label for="choice4">Exceptional</label><br />
+			</fieldset>
+			
+			<fieldset>
+			<legend>I am seeking more information regarding (check all that apply):</legend><br />
+			<input type="checkbox" id="work">
+			<label for="work">Job Opportunities</label><br />
+			<input type="checkbox" id="partners">
+			<label for="partners">Business Inquiries</label><br />
+			<input type="checkbox" id="complaints">
+			<label for="complaints">Complaints & Concerns</label><br />
+			</fieldset>
+			
+			<label for="info">Additional Information</label><br />
+			<textarea id="info" name="info"></textarea><br />
+			<input type="submit" name="submit" value="Submit">
+	</div>
+
+<footer>
+				<p>Located at: 6069 Mariposa Avenue, Key West, FL 33040</p>
+				<p>Contact Us: (330) 377-7376</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

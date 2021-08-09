@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link 		rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			crossorigin="anonymous">
+<link href="RestaurantStyles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<div class="alert">
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Note:</strong> This site performs best with JavaScript enabled. Please enable JavaScript on your device.
+</div>
+	<style>
+		h2 {color: #00b300;
+				font: lora;
+				font size: 25px;
+				border: yellow;}
+		li {color: #00b300;
+			font: lora;
+			text-decoration: underline;}
+			
+		table, td 	{border: 3px solid #00b300;
+						border-collapse: collapse;
+						padding: 5px 10px;
+						}
+		table 	{width: 25%;
+				margin: auto;
+				text-align: right;}
+				
+		tr 	{height: 30px;
+			background-color: gold;
+			}
+		tr:nth-child(odd) 	{background-color: yellow;}
+		caption 	{font-weight: bold;
+					font-size: 1.2em;
+					color: yellow;
+					caption-side: top;
+					text-align: center;}
+		p	{font: lora;
+			color: #00b300;
+			font-weight: bold;
+			}
+		
+	</style>
+</head>
+
+<body>
+
+<header class="jumbotron">
+	<h1> CAFE AMARILLO </h1>
+	<h4 class="text-right">Now celebrating the Grand Opening of a brand new location!</h4>
+</header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Drink of the Month is SG Special Brew!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Seasonal Menu is now available!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <style="width:100%">
+  <div class="text">Our Brand New location is located at 415 Theremin Court!</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+			<nav>
+				<a class="btn" href="RestaurantHomePage.html">Home <i class="fas fa-house-damage"></i></a>
+				<a class="btn" href="RestaurantMenuPage.html">Menu <i class="fas fa-coffee"></i></a>
+				<a class="btn" href="RestaurantContactPage.html">Contact <i class="far fa-comment"></i></a>
+			</nav>
+<div class="container">
+<div id="Sandwiches">
+	<h2>Sandwiches $9.75</h2>
+		<ul>
+			<li>Tomato Caprese</li>
+			<li>Roasted BLT</li>
+			<li>Cuban Club</li>
+		</ul>
+</div>
+<div id="Soups">
+	<h2>Soups</h2>
+	<p>Cup $4</p>
+	<p>Bowl $8</p>
+		<ul>
+			<li>Broccoli Cheddar</li>
+			<li>Italian Wedding</li>
+			<li>Tomato Basil</li>
+		</ul>
+</div>
+<div id="Salads">
+	<h2>Salads $9.75</h2>
+		<ul>
+			<li>Strawberry Poppyseed</li>
+			<li>Classic Caesar</li>
+			<li>Bacon & Avocado</li>
+		</ul>
+</div>
+</div>
+<div class="container2">
+<div id="Smoothies">
+	<h2>Smoothies $3.95</h2>
+		<ul>
+			<li>Mango Kale</li>
+			<li>Strawberry Banana</li>
+			<li>Acai Berry Blend</li>
+		</ul>
+</div>
+<div id="Caffeine">	
+	<h2>Caffeine</h2>
+	<p>12oz $3.75</p>
+	<p>20oz $4.75</p>
+	
+		<ul>
+			<li>Signature Yellow Latte</li>
+			<li>Traditional Cappucino</li>
+			<li>London Fog</li>
+		</ul>
+</div>
+
+<article id="beverages">
+	<table>
+	<caption>Beverages</caption>
+		<tr>
+			<td>Root Beer</td>
+			<td>$3.00</td>
+		</tr>
+		<tr>
+			<td>Bottled Water</td>
+			<td>$1.25</td>
+		</tr>
+		<tr>
+			<td>Lemonade</td>
+			<td>$1.00</td>
+		</tr>
+		<tr>
+			<td>Iced Tea</td>
+			<td>$1.25</td>
+		</tr>
+	</table>
+</article>
+</div>
+</body>
+<br />
+<footer>
+				<p>Located at: 6069 Mariposa Avenue, Key West, FL 33040</p>
+				<p>Contact Us: (330) 377-7376</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</html>
